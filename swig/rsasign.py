@@ -5,13 +5,13 @@ import wolfssl
 
 # start Random Number Generator
 rng = wolfssl.GetRng()
-if rng == None:
+if rng is None:
     print "Couldn't get an RNG"
     exit(-1)
 
 # load RSA private key in DER format
 key = wolfssl.GetRsaPrivateKey("../certs/client-key.der")
-if key == None:
+if key is None:
     print "Couldn't load DER private key file"
     exit(-1)
 
