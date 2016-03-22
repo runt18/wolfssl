@@ -8,7 +8,7 @@ print "Trying to connect to the example server -d..."
 wolfssl.wolfSSL_Init()
 #wolfssl.wolfSSL_Debugging_ON()
 ctx = wolfssl.wolfSSL_CTX_new(wolfssl.wolfTLSv1_2_client_method())
-if ctx == None:
+if ctx is None:
     print "Couldn't get SSL CTX for TLSv1.2"
     exit(-1)
 
